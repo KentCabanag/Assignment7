@@ -11,8 +11,7 @@ print("\n\033[34;4mCounting Number of Words, Vowels and Consonants\033[0m")
 user = input("\n>>\033[32;1mEnter a Sentence\033[0m: ")
 
 def num_of_words():
-    words = user.split()
-    number_of_words = len(words)
+    number_of_words = len(user.split())
     print(f"\n\033[31;1mNumber of Words\033[0m: {number_of_words}")
 
 def num_of_vowels():

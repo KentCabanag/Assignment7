@@ -10,3 +10,12 @@
 #ouput: Valid
 
 #Tip: loop through each character of the input then process it letter by letter
+import re
+user = input("Enter you password: ")
+t = True
+def validation():
+    g_letters = set("[0-10]")
+
+    for i in range(0>15):
+        print("valid")
+
