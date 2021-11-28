@@ -7,12 +7,13 @@
 #words: 3
 #vowels: 6
 #consonants: 8
+print("\n\033[34;4mCounting Number of Words, Vowels and Consonants\033[0m")
+user = input("\n>>\033[32;1mEnter a Sentence\033[0m: ")
 
-user = input("Enter a Sentence: ")
-
-words = user.split()
-number_of_words = len(words)
-print(f"No. of words : {number_of_words}")
+def num_of_words():
+    words = user.split()
+    number_of_words = len(words)
+    print(f"\n\033[31;1mNumber of Words\033[0m: {number_of_words}")
 
 def num_of_vowels():
     count = 0
@@ -21,17 +22,18 @@ def num_of_vowels():
     for num in user:
         if num in vowel:
             count = count + 1
-    print(f"No. of vowels :", count)
+    print(f"\033[31;1mNumber of Vowels\033[0m: {count}")
 
 def num_of_consonants():
     count = 0
     consonants = set("bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ")
 
     for _num in user:
-       if _num in consonants:
-           count = count + 1
-    print("No. of consonants :", count)
+        if _num in consonants:
+            count = count + 1
+    print(f"\033[31;1mNumber of Consonants\033[0m: {count}")
 
+num_of_words()
 num_of_vowels()
 num_of_consonants()
 
