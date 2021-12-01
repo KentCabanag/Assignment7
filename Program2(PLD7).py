@@ -11,13 +11,28 @@
 
 #Tip: loop through each character of the input then process it letter by letter
 
+user = input("Enter your PASSWORD: ")
 
-import re
-user = input("Enter your password: ")
-valid = 0
+def validator():
+    spclChar = ("!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "-", "_", "=", "+", "[", "]", "{", "}", ".", "|", ";", ":", "'", "?", ",", "/", "<", ">", "~", "`")
+    val = True
 
-while True:
-    if (len(user)<15):
-        valid = 1
-        break
+    if len(user) < 15:
+        print("\nLength should be greater than 15 letters")
+        val = False
     
+    if not any(char.isdigit() for char in user):
+        print("Password should have at least one number")
+        val = False
+    
+    if not any(char.isupper() for char in user):
+        print("Password should have at least one capital letter")
+        val = False
+
+    if not any(char in spclChar for char in user):
+        print("Password should have at least one special character")
+        val = False
+    
+    return val
+
+
